@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>應援成果報告書（純 HTML 版）</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/cover.svg" alt="cover" onerror="this.style.display='none'">
+        <div>
+          <h1>2025 應援成果報告書</h1>
+          <p id="subtitle">某韓團 • 台北演唱會 • 應援總結</p>
+        </div>
+      </div>
+      <div>
+        <button class="btn" onclick="window.print()">🖨️ 列印 / 存成 PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="card">
+        <div class="cover">
+          <img id="cover-img" src="images/cover.svg" alt="event cover">
+          <div class="cover-gradient"></div>
+          <div class="cover-meta">
+            <div class="sub" id="cover-meta"></div>
+            <div class="title" id="cover-title">某韓團 • 台北演唱會 • 應援總結</div>
+          </div>
+        </div>
+      </div>
+      <aside>
+        <nav class="card card-pad toc print-hide">
+          <h4>目錄</h4>
+          <ul id="toc-list" style="list-style:none; padding-left:0; margin:0;"></ul>
+        </nav>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Sections -->
+  <main class="container" style="padding: 24px 0">
+    <div id="sections" class="grid"></div>
+  </main>
+
+  <footer class="footer print-hide">
+    <p>© <span id="year"></span> Fan Project Team • 本頁僅作為應援成果公開展示，非商業用途。</p>
+  </footer>
+
+  <button class="fab print-hide" title="Back to top" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆️</button>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
