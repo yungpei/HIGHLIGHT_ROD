@@ -44,8 +44,8 @@ const data = {
       id: "outdoor-banner",
       icon: "🚩",
       title: "場外旗布留言應援",
-      description: "設置大型旗布與拍照背板，蒐集粉絲手寫祝福，演後整理成相簿與數位檔。",
-      gallery: ["images/flag.jpg","images/banner_2.svg"]
+      description: "場外大旗布的留言應援，是我們希望能透過各位B2UTY&LIGHT的祝福與鼓勵，將文字匯聚成一股溫暖的力量，讓社長們能感受到台灣粉絲一路以來的支持與陪伴。當天開始整隊進場後，團隊小編也將旗布交給希林主辦負責人，並由他們交給社長的經紀人，順利將大家的心意傳達給社長。",
+      gallery: ["images/flag.jpg"]
     },
     {
       id: "surprise-video",
