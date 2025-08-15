@@ -1,22 +1,23 @@
 
 // ---- Data (可直接改這裡) ----
 const data = {
-  title: "2025 應援成果報告書",
-  subtitle: "某韓團 • 台北演唱會 • 應援總結",
+  title: "2025 Ride or Die 應援成果報告書",
+  subtitle: "HIGHLIGHT • BEAST • 應援總結",
   cover: {
-    image: "images/cover.svg",
-    date: "2025-07-20",
-    venue: "台北小巨蛋",
+    image: "images/highlight_ban.png",
+    date: "2025-08-02",
+    venue: "台北流行音樂中心",
   },
   sections: [
     {
-      id: "welcome-snacks",
-      icon: "🍪",
-      title: "迎賓點心",
-      description: "於場外設置迎賓點心攤位，提供主題色小點與飲品，讓粉絲在入場前補充能量並拍照打卡。",
-      gallery: ["images/snack_1.svg","images/snack_2.svg","images/snack_3.svg"],
-      notes: ["動線規劃：入場口右側 20 公尺區域","供應時段：16:30–18:30","志工配置：4 人輪值"]
-    },
+    id: "welcome-snacks",
+    icon: "🍪",
+    title: "迎賓點心",
+    description: "還記得去年 10 月起光 solo 場結束後，有次邊散步邊開 IG 直播時，突然說好想念台灣的芒果冰，還許願下次來一定要吃到！結果這次演唱會剛好是在炎炎夏日，我們立馬幫社長們準備心心念念的愛文芒果冰沙💚，還有工作人員們最愛的台灣 18 天生啤酒～冰冰涼涼超消暑💚 最幸福的是，成員們還幫我們認證超好喝，東雲更是在兩天的演唱會上都提到他們喝了芒果冰沙💚！光是想像他們邊笑邊喝的樣子，就覺得一切都值得啦～",
+    gallery: ["images/mango1.jpg", "images/mango2.png", "images/beer.jpg"],
+    notes: ["愛文芒果冰沙", "18天生啤酒"]
+  },
+
     {
       id: "hotel-decor",
       icon: "🛏️",
@@ -52,7 +53,7 @@ const data = {
       title: "驚喜影片暨手幅應援",
       description: "整合全球粉絲投稿製作驚喜影片，並於進場發放應援手幅，座位區一起舉起完成應援海。",
       video: { url: "https://www.youtube.com/embed/GzY2N-KKWbM?si=l7WfpKhDr9sk2eoy", caption: "Surprise Project Teaser" },
-      gallery: ["images/slogan_1.svg"]
+      gallery: ["images/slogan.jpg"]
     },
     {
       id: "highlight-confetti",
@@ -115,7 +116,7 @@ const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
 const currency = new Intl.NumberFormat("zh-TW", { style: "currency", currency: "TWD", maximumFractionDigits: 0 });
 
 // ---- Initialize header/cover ----
-document.title = `應援成果報告書（純 HTML 版）`;
+document.title = `應援成果報告書`;
 $("#subtitle").textContent = data.subtitle;
 $("#cover-img").src = data.cover.image;
 $("#cover-title").textContent = data.subtitle;
