@@ -45,7 +45,7 @@ const data = {
       icon: "🚩",
       title: "場外旗布留言應援",
       description: "設置大型旗布與拍照背板，蒐集粉絲手寫祝福，演後整理成相簿與數位檔。",
-      gallery: ["images/banner_1.svg","images/banner_2.svg"]
+      gallery: ["images/flag.jpg","images/banner_2.svg"]
     },
     {
       id: "surprise-video",
@@ -60,7 +60,11 @@ const data = {
       icon: "✨",
       title: "HIGHLIGHT 彩帶應援",
       description: "高潮曲目時段啟動主題色紙彩帶特效，並同步手機手燈波浪，營造全場沉浸式氛圍。",
-      gallery: ["images/confetti_1.svg","images/confetti_2.svg"]
+      video: { 
+      url: "videos/coloer.MP4", 
+      caption: "HIGHLIGHT 彩帶應援實況" 
+    },
+    gallery: ["images/confetti_1.svg","images/confetti_2.svg"]
     },
     {
       id: "finance",
@@ -140,12 +144,20 @@ data.sections.forEach((s, idx) => {
   const surplusBox = s.id === "finance" ? renderFinanceBox(s.finance) : "";
 
   const videoBlock = s.video?.url ? `
-  <div class="card" style="margin-top:12px">
-    <div class="aspect">
-      <iframe src="${s.video.url}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    ${s.video.caption ? `<div class="card-pad small">${s.video.caption}</div>` : ""}
-  </div>` : "";
+    <div class="card" style="margin-top:12px">
+      <div class="aspect">
+        ${
+          s.video.url.endsWith(".mp4")
+            ? `<video controls style="width:100%; height:100%; border-radius:12px">
+                 <source src="${s.video.url}" type="video/mp4">
+                 你的瀏覽器不支援影片播放
+               </video>`
+            : `<iframe src="${s.video.url}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+        }
+      </div>
+      ${s.video.caption ? `<div class="card-pad small">${s.video.caption}</div>` : ""}
+    </div>` : "";
+
 
   const gallery = (s.gallery && s.gallery.length) ? `
   <div class="gallery">
