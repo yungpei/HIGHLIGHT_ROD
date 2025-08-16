@@ -62,8 +62,23 @@ const data = {
       id: "backstage-food",
       icon: "🍱",
       title: "後台食物應援",
-      description: "上一次斗俊來台灣微風之夜活動時，有提到如果不用飲控的話會想吃3碗牛肉麵！因此這次團隊準備了鼎泰豐的小籠包及牛肉麵，幫社長達成來台灣吃美食的心願。另外也準備了他們每天不可或缺的冰美式，幫助他們彩排時提振精神。",
-      gallery: ["images/catering_1.svg","images/catering_2.svg"]
+      // pages 內每個物件就是一頁
+      pages: [
+        {
+          title: "後台食物應援｜鼎泰豐 小籠包 & 牛肉麵 & 冰美式",
+          description:
+            "上一次斗俊來台灣微風之夜活動時，有提到如果不用飲控的話會想吃3碗牛肉麵！因此這次團隊準備了鼎泰豐的小籠包及牛肉麵，幫社長達成來台灣吃美食的心願。另外也準備了他們每天不可或缺的冰美式，幫助他們彩排時提振精神。",
+          gallery: ["images/back00.jpg", "images/back01.jpg"],
+          notes: ["鼎泰豐 小籠包 & 牛肉麵", "冰美式"]
+        },
+        {
+          title: "後台食物應援｜洪瑞珍 三明治 & 50嵐 深焙烏龍拿鐵+波霸",
+          description:
+            "工作人員的部分準備了韓國人之間很紅的台灣洪瑞珍三明治以及 50 嵐的深焙烏龍拿鐵+波霸，希望他們吃飽喝足後認真地完成各自崗位的工作，使演唱會順利進行。在後台休息室內我們也準備了 FIN 運動飲料、原翠無糖茶和數款冰淇淋及零食組等等，讓成員和全體工作人員在工作空檔時能享用一些茶水點心，打擊工作的疲憊感！",
+          gallery: ["images/back1.jpg", "images/back2.jpg", "images/back3.jpg", "images/back4.png", "images/back5.png"],
+          notes: ["洪瑞珍 三明治", "50嵐 深焙烏龍拿鐵+波霸" , "水果杯", "FIN 運動飲料", "原翠無糖茶", "數款冰淇淋及零食組"]
+        }
+     ]
     },
     {
       id: "outdoor-banner",
@@ -76,7 +91,7 @@ const data = {
       id: "surprise-video",
       icon: "🎬",
       title: "驚喜影片暨手幅應援",
-      description: "整合全球粉絲投稿製作驚喜影片，並於進場發放應援手幅，座位區一起舉起完成應援海。",
+      description: "主題選用了BEAST/HIGHLIGHT於我而言是...？ 搭配歷年 MV 回顧以及由團隊事先收集賴特們的投稿影片,將大家心中 BEAST/HIGHLIGHT 是什麼樣的特別存在，和各位想對HIGHLIGHT說的話藉由影片應援傳遞給社長們，期望影片帶給社長們滿滿的溫暖與感動。謝謝喜歡這部影片的大家也很感謝各位的投稿參與，團隊盡最大努力讓投稿的賴特都能出現在影片中，但不免因為影片時長限制的原因而有遺珠之憾，感謝大家的體諒！",
       video: { url: "https://www.youtube.com/embed/GzY2N-KKWbM?si=l7WfpKhDr9sk2eoy", caption: "Surprise Project Teaser" },
       gallery: ["images/slogan.jpg"]
     },
