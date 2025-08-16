@@ -10,34 +10,59 @@ const data = {
   },
   sections: [
     {
-    id: "welcome-snacks",
-    icon: "🍪",
-    title: "迎賓點心",
-    description: "還記得去年 10 月起光 solo 場結束後，有次邊散步邊開 IG 直播時，突然說好想念台灣的芒果冰，還許願下次來一定要吃到！結果這次演唱會剛好是在炎炎夏日，我們立馬幫社長們準備心心念念的愛文芒果冰沙💚，還有工作人員們最愛的台灣 18 天生啤酒～冰冰涼涼超消暑💚 最幸福的是，成員們還幫我們認證超好喝，東雲更是在兩天的演唱會上都提到他們喝了芒果冰沙💚！光是想像他們邊笑邊喝的樣子，就覺得一切都值得啦～",
-    gallery: ["images/mango1.jpg", "images/mango2.png", "images/beer.jpg"],
-    notes: ["愛文芒果冰沙", "18天生啤酒"]
-  },
+      id: "welcome-snacks",
+      icon: "🍪",
+      title: "迎賓點心",
+      // pages 內每個物件就是一頁
+      pages: [
+        {
+          title: "迎賓點心｜芒果冰沙 & 18 天生啤酒",
+          description:
+            "還記得去年 10 月起光 solo 場結束後，有次邊散步邊開 IG 直播時，社長突然說好想念台灣的芒果冰，還許願下次來一定要吃到！這次剛好是炎炎夏日，我們立刻準備了心心念念的愛文芒果冰沙💚，還有工作人員最愛的台灣 18 天生啤酒～冰冰涼涼超消暑💚。最幸福的是，成員們還幫我們認證超好喝；東雲更是在兩天的演唱會上都提到他們喝了芒果冰沙💚！光是想像他們邊笑邊喝的樣子，就覺得一切都值得啦～",
+          gallery: ["images/mango1.jpg", "images/mango2.png", "images/beer.jpg"],
+          notes: ["愛文芒果冰沙", "台灣 18 天生啤酒"]
+        },
+        {
+          title: "迎賓點心｜大苑子 爆漿雞蛋糕 & 黑糖三料豆花",
+          description:
+            "點心部分我們特別排除夏天容易有負擔的雞排、地瓜球，改選冰涼又具台灣特色的黑糖三料豆花，以及輕鬆可口的爆漿雞蛋糕，讓成員與工作人員都能開心享用台式甜點！",
+          gallery: ["images/cake1.jpg", "images/egg.png"],
+          notes: ["爆漿雞蛋糕", "黑糖三料豆花"]
+        }
+     ]
+    },
 
     {
       id: "hotel-decor",
       icon: "🛏️",
       title: "成員飯店布置",
-      description: "以團體官方色系佈置房間花藝與氣球牆，並準備手寫明信片祝福成員巡演順利。",
-      gallery: ["images/hotel_1.svg","images/hotel_2.svg"],
-      notes: ["佈置時間 11:00–12:30","與飯店協調免釘免黏替代方案"]
+      description: "選用了成員們代表色的氣球組以及成員名字的英文縮寫（DJ、YS、GK、DW）進行飯店布置，期待帶給成員們一進房間的驚喜感，也很開心在耀燮和斗俊的 YT 頻道裡都有認證到團隊在飯店準備的氣球歡迎禮。",
+      gallery: ["images/hotel.jpg","images/hotel2.jpg"]
     },
     {
       id: "welcome-gifts",
       icon: "🎁",
       title: "歡迎伴手禮",
-      description: "以在地特色小點與品牌聯名周邊組成 Welcome Kit，附上中英韓三語卡片。",
-      gallery: ["images/gift_1.svg"]
+      description:"我們精心挑選了韓國朋友來台必買的人氣伴手禮：噶瑪蘭威士忌、甜滿牛軋餅、義美小泡芙、奶茶沖泡飲等。成員部分再加碼中秋節月餅禮盒，以及舞台工作最需要的酸痛貼布與潤喉糖，祝亞巡準備順利、身體與喉嚨都顧好，之後也能和我們長長久久見面！",
+      gallery: ["images/gift2.png","images/gift1.jpg"],
+      notes: [
+        "【成員伴手禮】",
+        "噶瑪蘭 經典獨奏 Oloroso 雪莉桶",
+        "三統漢菓子 芋泥流心酥 中秋禮盒",
+        "甜滿牛軋餅",
+        "義美小泡芙",
+        "普拿疼肌立 酸痛貼布",
+        "京都念慈菴 枇杷潤喉糖",
+        "【工作人員伴手禮】",
+        "甜滿牛軋餅",
+        "香濃原味 奶茶沖泡飲"
+      ]
     },
     {
       id: "backstage-food",
       icon: "🍱",
       title: "後台食物應援",
-      description: "為成員與工作人員準備均衡便當、飲品與宵夜，加貼食材與過敏原標示。",
+      description: "上一次斗俊來台灣微風之夜活動時，有提到如果不用飲控的話會想吃3碗牛肉麵！因此這次團隊準備了鼎泰豐的小籠包及牛肉麵，幫社長達成來台灣吃美食的心願。另外也準備了他們每天不可或缺的冰美式，幫助他們彩排時提振精神。",
       gallery: ["images/catering_1.svg","images/catering_2.svg"]
     },
     {
@@ -59,12 +84,12 @@ const data = {
       id: "highlight-confetti",
       icon: "✨",
       title: "HIGHLIGHT 彩帶應援",
-      description: "高潮曲目時段啟動主題色紙彩帶特效，並同步手機手燈波浪，營造全場沉浸式氛圍。",
+      description: "彩帶應援原先在棒球賽中象徵比賽的完美落幕，藉由這個意義非凡的理念，我們團隊發想出運用成員代表色（藍、黃、綠、紫）四種顏色，配合 Follow Me 這首作為演唱會精彩結束並且大家一起快樂大喊應援的歌曲，從觀眾座位席拋灑出成員代表色彩帶，像是將全場的心意化為絢爛的弧線，與舞台上的光影交響，讓每一位觀眾在這一刻跟緊成員們的腳步，一起따랑해！留下共同的美好記憶。彩帶應援是非常需要全體觀眾的默契才有辦法一起完成的項目，本團隊再次感謝全體觀眾的盡力配合，多虧你們才能完成這項不容易的應援項目，另外也謝謝美麗的賴特在耀燮QA中問了他有沒有看到彩帶應援，謝謝耀燮稱讚了彩帶應援很漂亮！",
       video: { 
       url: "videos/coloer.MP4", 
       caption: "HIGHLIGHT 彩帶應援實況" 
     },
-    gallery: ["images/confetti_1.svg","images/confetti_2.svg"]
+    gallery: ["images/confetti_1.svg","images/c2.jpg"]
     },
     {
       id: "finance",
@@ -131,70 +156,45 @@ $("#year").textContent = new Date().getFullYear();
 const toc = $("#toc-list");
 const sectionsRoot = $("#sections");
 
-data.sections.forEach((s, idx) => {
-  // TOC item
-  const li = document.createElement("li");
-  li.innerHTML = `<a href="#${s.id}" data-id="${s.id}">${s.icon} ${s.title}</a>`;
-  toc.appendChild(li);
-
-  // Section card
-  const sec = document.createElement("section");
-  sec.className = "section";
-  sec.id = s.id;
-  const surplusBox = s.id === "finance" ? renderFinanceBox(s.finance) : "";
-
-  const videoBlock = s.video?.url ? `
+// ✅ 建議把這三個工具函式放在 forEach 外面
+function renderVideoBlock(v){
+  if(!v?.url) return "";
+  const isMp4 = v.url.endsWith(".mp4");
+  return `
     <div class="card" style="margin-top:12px">
       <div class="aspect">
         ${
-          s.video.url.endsWith(".mp4")
-            ? `<video controls style="width:100%; height:100%; border-radius:12px">
-                 <source src="${s.video.url}" type="video/mp4">
-                 你的瀏覽器不支援影片播放
-               </video>`
-            : `<iframe src="${s.video.url}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+          isMp4
+          ? `<video controls style="width:100%; height:100%; border-radius:12px">
+               <source src="${v.url}" type="video/mp4">
+               你的瀏覽器不支援影片播放
+             </video>`
+          : `<iframe src="${v.url}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
         }
       </div>
-      ${s.video.caption ? `<div class="card-pad small">${s.video.caption}</div>` : ""}
-    </div>` : "";
-
-
-  const gallery = (s.gallery && s.gallery.length) ? `
-  <div class="gallery">
-    ${s.gallery.map((src,i)=>`<img src="${src}" alt="${s.title} ${i+1}">`).join("")}
-  </div>` : "";
-
-  const notes = (s.notes && s.notes.length) ? `
-  <ul class="notes">
-    ${s.notes.map(n=>`<li>${n}</li>`).join("")}
-  </ul>` : "";
-
-  const names = (s.names && s.names.length) ? `
-  <div class="names">
-    ${[...s.names].sort((a,b)=>a.localeCompare(b)).map(n=>`<div class="name">${n}</div>`).join("")}
-  </div>` : "";
-
-  sec.innerHTML = `
-    <div class="section-card">
-      <div class="section-header">
-        <div class="section-icon">${s.icon}</div>
-        <div style="flex:1">
-          <div class="flex">
-            <h2 class="section-title">${s.title}</h2>
-            <a class="anchor" href="#${s.id}" title="複製錨點" onclick="copyAnchor(event,'${s.id}')">🔗 錨點</a>
-          </div>
-          ${s.description ? `<p class="desc">${s.description}</p>` : ""}
-        </div>
-      </div>
-      ${videoBlock}
-      ${gallery}
-      ${notes}
-      ${s.id === "finance" ? surplusBox : ""}
-      ${names}
+      ${v.caption ? `<div class="card-pad small">${v.caption}</div>` : ""}
     </div>
   `;
-  sectionsRoot.appendChild(sec);
-});
+}
+
+function renderPageBlock(p, pageNumber){
+  const video = renderVideoBlock(p.video);
+  const gallery = p.gallery?.length
+    ? `<div class="gallery">${p.gallery.map((src,i)=>`<img src="${src}" alt="${p.title||""} ${i+1}">`).join("")}</div>`
+    : "";
+  const notes = p.notes?.length
+    ? `<ul class="notes">${p.notes.map(n=>`<li>${n}</li>`).join("")}</ul>`
+    : "";
+  return `
+    <div class="section-card" style="margin-top:12px">
+      ${p.title ? `<h3 class="section-title" style="font-size:18px;margin:0 0 6px 0">${pageNumber}. ${p.title}</h3>` : ""}
+      ${p.description ? `<p class="desc">${p.description}</p>` : ""}
+      ${video}
+      ${gallery}
+      ${notes}
+    </div>
+  `;
+}
 
 function renderFinanceBox(fin){
   if(!fin) return "";
@@ -230,6 +230,60 @@ function renderFinanceBox(fin){
   </div>`;
 }
 
+// =========================
+// 渲染區塊
+// =========================
+data.sections.forEach((s, idx) => {
+  // TOC item
+  const li = document.createElement("li");
+  li.innerHTML = `<a href="#${s.id}" data-id="${s.id}">${s.icon} ${s.title}</a>`;
+  toc.appendChild(li);
+
+  // Section card
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.id = s.id;
+
+  const hasPages = Array.isArray(s.pages) && s.pages.length > 0;
+
+  sec.innerHTML = `
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">${s.icon}</div>
+        <div style="flex:1">
+          <div class="flex">
+            <h2 class="section-title">${s.title}</h2>
+            <a class="anchor" href="#${s.id}" title="複製錨點" onclick="copyAnchor(event,'${s.id}')">🔗 錨點</a>
+          </div>
+          ${!hasPages && s.description ? `<p class="desc">${s.description}</p>` : ""}
+        </div>
+      </div>
+
+      ${
+        hasPages
+          ? s.pages.map((p, i) => renderPageBlock(p, i + 1)).join("")
+          : `
+            ${renderVideoBlock(s.video)}
+            ${s.gallery?.length
+                ? `<div class="gallery">${s.gallery.map((src,i)=>`<img src="${src}" alt="${s.title} ${i+1}">`).join("")}</div>`
+                : ""}
+            ${s.notes?.length
+                ? `<ul class="notes">${s.notes.map(n=>`<li>${n}</li>`).join("")}</ul>`
+                : ""}
+          `
+      }
+
+      ${s.id === "finance" && s.finance ? renderFinanceBox(s.finance) : ""}
+      ${s.names?.length
+          ? `<div class="names">${[...s.names].sort((a,b)=>a.localeCompare(b)).map(n=>`<div class="name">${n}</div>`).join("")}</div>`
+          : ""}
+    </div>
+  `;
+
+  // ✅ 把 section 插入頁面
+  sectionsRoot.appendChild(sec);
+}); // ✅ 補上 forEach 的結尾
+
 // ---- Anchor copy ----
 window.copyAnchor = function(e, id){
   e.preventDefault();
@@ -239,19 +293,24 @@ window.copyAnchor = function(e, id){
     navigator.clipboard.writeText(url.toString());
   }
   window.location.hash = id;
-}
+};
 
 // ---- Scroll spy ----
 const sectionIds = data.sections.map(s=>s.id);
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     const id = entry.target.id;
-    const link = $(`#toc-list a[href="#${id}"]`);
+    const link = document.querySelector(`#toc-list a[href="#${id}"]`);
     if(entry.isIntersecting){
-      $$("#toc-list a").forEach(a=>a.classList.remove("active"));
+      document.querySelectorAll("#toc-list a").forEach(a=>a.classList.remove("active"));
       link?.classList.add("active");
     }
   });
 }, { rootMargin: "-50% 0px -40% 0px", threshold: 0.01 });
 
-sectionIds.forEach(id => observer.observe(document.getElementById(id)));
+// ✅ 確保節點已插入後再觀察
+sectionIds.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) observer.observe(el);
+});
+
