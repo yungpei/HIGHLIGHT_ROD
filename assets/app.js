@@ -110,25 +110,29 @@ const data = {
       id: "finance",
       icon: "💰",
       title: "財務支出暨結餘處理",
-      description: "公開透明列示各項支出與收入來源，結餘依約定比例提撥至下一場次與公益捐款。",
+      description: `本次演唱會所有應援支出及集資名冊的詳細記錄請於
+      <a href="https://docs.google.com/spreadsheets/d/1vUTc1248Tm2LH4igjSSLxIQ3mXngY5FoG6DbWiTzSmA/edit?usp=sharing" 
+        target="_blank" 
+        style="color:#dc2626; font-weight:600; text-decoration:underline">
+        紅色連結
+      </a> 查閱。<br>
+        本次集資總金額為<span class="num-red">91,980</span>元，
+        應援總支出為<span class="num-red">88,260</span>元，
+        因此剩餘金額為<span class="num-red">3,720</span>元。餘額部分將全數保留至下一次
+        HIGHLIGHT 成員演唱會及其他相關應援中，使用同時也將公告其財務支出明細。
+        再次感謝所有集資者，也特別感謝 Beautylight_tw_union 團隊，
+        將他們募集的資金轉交給予我們，感謝大家的支持讓我們能順利完成應援。`,
       finance: {
         currency: "TWD",
         income: [
-          { item: "集資收入", amount: 185000 },
-          { item: "周邊義賣", amount: 23000 }
+          { item: "集資收入", amount: 91980}
         ],
-        expenses: [
-          { item: "點心採購", amount: 28000, note: "含飲品與紙餐具" },
-          { item: "飯店佈置", amount: 15000 },
-          { item: "伴手禮", amount: 22000 },
-          { item: "後台餐飲", amount: 36000 },
-          { item: "旗布背板", amount: 18000 },
-          { item: "驚喜影片製作", amount: 12000 },
-          { item: "手幅印刷", amount: 14000 },
-          { item: "彩帶特效", amount: 19000 },
-          { item: "雜支(物流/交通)", amount: 8000 }
-        ],
-        surplusPolicy: "結餘 60% 保留為下次應援基金、40% 以應援名義捐贈兒少公益。"
+      expenses: [
+        { item: "0801 飯店應援", amount: 39442 },
+        { item: "0802 後台食物應援", amount: 10469 },
+        { item: "0802 演唱會應援", amount: 38349 }
+      ],
+      surplusPolicy: "結餘保留為下次應援基金。"
       }
     },
     {
@@ -142,8 +146,8 @@ const data = {
       id: "helpers",
       icon: "🤝",
       title: "小幫手感謝名單",
-      description: "感謝協力夥伴於現場動線、物資、攝影與社群記錄上的大力相助。",
-      names: ["Ivy","Jason","Kiko","Leo","Mika","Nina"]
+      description: "感謝所有的小幫手一起陪我們進行場外應援跟會場場佈，有你們的幫忙我們才能順利在時間內將旗布.彩帶還有手幅setting完成，所有的小幫手們都辛苦了，團隊在此衷心的感謝你們願意捨棄自己時間來幫忙，真的非常感謝！",
+      names: ["Taylor","Chin","LEE","YJ","Ting ting","Yu yu", "Sonnie", "A-RU", "黃小嘉", "時雨", "Cindy", "yc", "Ava", "拉拉", "Jeffrey", "冠潔", "肉肉"]
     },
     {
       id: "closing",
