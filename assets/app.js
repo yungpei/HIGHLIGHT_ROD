@@ -96,14 +96,14 @@ const data = {
         {
           title: "驚喜影片",
           description:
-            "主題選用了BEAST/HIGHLIGHT於我而言是...？ 搭配歷年 MV 回顧以及由團隊事先收集賴特們的投稿影片,將大家心中 BEAST/HIGHLIGHT 是什麼樣的特別存在，和各位想對HIGHLIGHT說的話藉由影片應援傳遞給社長們，期望影片帶給社長們滿滿的溫暖與感動。謝謝喜歡這部影片的大家也很感謝各位的投稿參與，團隊盡最大努力讓投稿的賴特都能出現在影片中，但不免因為影片時長限制的原因而有遺珠之憾，感謝大家的體諒！",
+            "主題選用了BEAST/HIGHLIGHT於我而言是...？ 搭配歷年 MV 回顧以及由團隊事先收集賴特們的投稿影片，將大家心中 BEAST/HIGHLIGHT 是什麼樣的特別存在，和各位想對HIGHLIGHT說的話藉由影片應援傳遞給社長們，期望影片帶給社長們滿滿的溫暖與感動。謝謝喜歡這部影片的大家也很感謝各位的投稿參與，團隊盡最大努力讓投稿的賴特都能出現在影片中，但不免因為影片時長限制的原因而有遺珠之憾，感謝大家的體諒！",
           video: { url: "https://www.youtube.com/embed/GzY2N-KKWbM?si=l7WfpKhDr9sk2eoy", caption: "Surprise Project Teaser" },
         },
         {
           title: "手幅應援",
           description:
-            "없는 엔딩을 향해 따랑해 是我們團隊選了好久好久最終決定的手幅文字，結合endless ending和follow me這兩首歌的元素，象徵LIGHT們會永遠朝著無止盡的結局一直跟隨著HIGHLIGHT",
-          gallery: ["images/slogan.jpg"]
+            "없는 엔딩을 향해 따랑해 是我們團隊選了好久好久最終決定的手幅文字，結合 Endless Ending 和 Follow Me 這兩首歌的元素，象徵 LIGHT 們會永遠朝著無止盡的結局一直跟隨著 HIGHLIGHT！",
+          gallery: ["images/slogan.jpg","images/slogan2.png"]
         }
      ]
     },
@@ -116,7 +116,7 @@ const data = {
       url: "videos/coloer.MP4", 
       caption: "HIGHLIGHT 彩帶應援實況" 
     },
-    gallery: ["images/confetti_1.svg","images/c2.jpg"]
+    gallery: ["images/c1.png","images/c2.jpg"]
     },
     {
       id: "finance",
@@ -152,7 +152,37 @@ const data = {
       icon: "👥",
       title: "集資感謝名單",
       description: "感謝所有支持本次專案的贊助者（以下依首字母排序）。",
-      names: ["A‑Chan","Belle","Cindy","Dylan","Echo","Fina","Gio","Hana"]
+      names: [
+        "Highlight with Light","Hsieh","小晴","灰毛",
+        "林瑄","欸馬","두두꽃","匿名賴特",
+        "Molly","燮燮尼***","jeongwoo_07","데이드림닝 ෆ⸒⸒ 寧寧",
+        "亞風asiawindlin","黃小嘉","Lilyyyyy","CHEN YIYU",
+        "瑞典肉球","元元","miso","Rosa",
+        "Jiang","shanshan","佳樺🤍","쯔기",
+        "匿名賴特","Yuchu","B2uty","claire.c",
+        "青蛙妹","齡萱","匿名賴特","TY",
+        "匿名賴特","Muuuu","Donna","吉兒",
+        "light.yu","阿真～","양양","Eileen",
+        "最愛耀燮的柔柔💖","蘋💛","cc","Yuuuushan",
+        "77C","訢祉","상릉","zl_9319",
+        "G","93chu","chieh","9064.maggie",
+        "阿琛","YU YUN","小羊媽咪","睿米",
+        "Hui","匿名賴特","정가가","耀愛緩",
+        "Shawol.lightb2uty","朵","Julie","Y_Y",
+        "尹斗俊無緣的妻子","灰毛","蟹","Yu jen",
+        "斗斗蝦","CJY","Hanaul","소혜",
+        "Della","안청","Vanessa_duj","史黛西",
+        "hohoho_56","李慢慢的努娜","匿名賴特","熊熊和香港賴特",
+        "weiru✨💡","Rou","匿名賴特","Anna",
+        "匿名賴特","嚕比","語喬","Ting",
+        "Yuxin","shin__00_","Wen","Lynn_0125",
+        "珮珮","匿名賴特","Ludo","ㅎㅎ",
+        "yurong","미우","匿名賴特","匿名賴特",
+        "Mina","Sarah","老白.","匿名賴特",
+        "匿名賴特","RueiCC","Ru","匿名賴特",
+        "宜靜","匿名賴特","匿名賴特","俐妏",
+        "白菜🥬","岱西","芝麻糯米"
+      ]
     },
     {
       id: "helpers",
