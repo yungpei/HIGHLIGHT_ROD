@@ -101,9 +101,13 @@ const data = {
         },
         {
           title: "手幅應援",
-          description:
-            "없는 엔딩을 향해 따랑해 是我們團隊選了好久好久最終決定的手幅文字，結合 Endless Ending 和 Follow Me 這兩首歌的元素，象徵 LIGHT 們會永遠朝著無止盡的結局一直跟隨著 HIGHLIGHT！",
-          gallery: ["images/slogan.jpg","images/slogan2.png"]
+          description: "없는 엔딩을 향해 따랑해 是我們團隊選了好久好久最終決定的手幅文字，結合 Endless Ending 和 Follow Me 這兩首歌的元素，象徵 LIGHT 們會永遠朝著無止盡的結局一直跟隨著 HIGHLIGHT！",
+          gallery: [
+            "images/slogan.jpg",
+            "images/slogan2.jpg"
+          ],
+          galleryCols: 1,   // 單欄：每張圖一整行
+          fit: "contain"    // 不裁切，維持比例
         }
      ]
     },
@@ -195,7 +199,7 @@ const data = {
       id: "closing",
       icon: "📝",
       title: "應援心得和結語",
-      description: "這次專案讓我們學到跨國協作、即時溝通與現場風險控管的重要；也再次見證粉絲間的相互支持與愛。期待下一次，更成熟、更溫暖。"
+      description: "從這次的應援活動真的學習到好多，也深刻體會到 LIGHT 和 B2UTY 滿滿的支持和愛。能跟大家一起完成這段特別的回憶真的很幸福，期待下次再見面時，我們能更厲害、更溫暖！"
     }
   ]
 };
@@ -240,12 +244,32 @@ function renderVideoBlock(v){
 
 function renderPageBlock(p, pageNumber){
   const video = renderVideoBlock(p.video);
-  const gallery = p.gallery?.length
-    ? `<div class="gallery">${p.gallery.map((src,i)=>`<img src="${src}" alt="${p.title||""} ${i+1}">`).join("")}</div>`
+
+  // 欄數（1=單欄滿版；不填就沿用原本 .gallery 響應式）
+  const cols = Number(p.galleryCols);
+  const galleryWrapStyle = cols
+    ? `style="display:grid;gap:10px;grid-template-columns:repeat(${cols},1fr)"`
     : "";
+
+  // 依 fit 決定圖片樣式：'contain' = 不裁切；預設 = cover
+  const fit = (p.fit || "").toLowerCase(); // 'contain' or 'cover'
+  const imgStyle =
+    fit === "contain"
+      ? "width:100%; height:auto; object-fit:contain;"
+      : `width:100%; height:${Number(p.imageHeight)||160}px; object-fit:cover;`;
+
+  const gallery = p.gallery?.length
+    ? `<div class="gallery" ${galleryWrapStyle}>
+         ${p.gallery.map((src,i)=>`
+           <img src="${src}" alt="${p.title||""} ${i+1}" style="${imgStyle}">
+         `).join("")}
+       </div>`
+    : "";
+
   const notes = p.notes?.length
     ? `<ul class="notes">${p.notes.map(n=>`<li>${n}</li>`).join("")}</ul>`
     : "";
+
   return `
     <div class="section-card" style="margin-top:12px">
       ${p.title ? `<h3 class="section-title" style="font-size:18px;margin:0 0 6px 0">${pageNumber}. ${p.title}</h3>` : ""}
