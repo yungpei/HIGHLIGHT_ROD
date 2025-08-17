@@ -91,9 +91,21 @@ const data = {
       id: "surprise-video",
       icon: "🎬",
       title: "驚喜影片暨手幅應援",
-      description: "主題選用了BEAST/HIGHLIGHT於我而言是...？ 搭配歷年 MV 回顧以及由團隊事先收集賴特們的投稿影片,將大家心中 BEAST/HIGHLIGHT 是什麼樣的特別存在，和各位想對HIGHLIGHT說的話藉由影片應援傳遞給社長們，期望影片帶給社長們滿滿的溫暖與感動。謝謝喜歡這部影片的大家也很感謝各位的投稿參與，團隊盡最大努力讓投稿的賴特都能出現在影片中，但不免因為影片時長限制的原因而有遺珠之憾，感謝大家的體諒！",
-      video: { url: "https://www.youtube.com/embed/GzY2N-KKWbM?si=l7WfpKhDr9sk2eoy", caption: "Surprise Project Teaser" },
-      gallery: ["images/slogan.jpg"]
+      // pages 內每個物件就是一頁
+      pages: [
+        {
+          title: "驚喜影片",
+          description:
+            "主題選用了BEAST/HIGHLIGHT於我而言是...？ 搭配歷年 MV 回顧以及由團隊事先收集賴特們的投稿影片,將大家心中 BEAST/HIGHLIGHT 是什麼樣的特別存在，和各位想對HIGHLIGHT說的話藉由影片應援傳遞給社長們，期望影片帶給社長們滿滿的溫暖與感動。謝謝喜歡這部影片的大家也很感謝各位的投稿參與，團隊盡最大努力讓投稿的賴特都能出現在影片中，但不免因為影片時長限制的原因而有遺珠之憾，感謝大家的體諒！",
+          video: { url: "https://www.youtube.com/embed/GzY2N-KKWbM?si=l7WfpKhDr9sk2eoy", caption: "Surprise Project Teaser" },
+        },
+        {
+          title: "手幅應援",
+          description:
+            "없는 엔딩을 향해 따랑해 是我們團隊選了好久好久最終決定的手幅文字，結合endless ending和follow me這兩首歌的元素，象徵LIGHT們會永遠朝著無止盡的結局一直跟隨著HIGHLIGHT",
+          gallery: ["images/slogan.jpg"]
+        }
+     ]
     },
     {
       id: "highlight-confetti",
